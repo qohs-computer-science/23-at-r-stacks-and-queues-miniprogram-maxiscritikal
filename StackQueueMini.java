@@ -34,10 +34,22 @@ class StackQueueMini {
     }//end while loop
 
     System.out.println("Here is your new Stack after the method:");
+    Stack<Integer> printStack = new Stack<>();
     while (!myStack.isEmpty()) 
     {
-      System.out.print(myStack.pop() + ", ");
+      printStack.push(myStack.pop());
     }//end while loop
+    
+    System.out.print("BOTTOM: ");
+    while (!printStack.isEmpty()) 
+    {
+      System.out.print(printStack.pop() + ", ");
+    }//end while loop
+    System.out.println("TOP");
+
+
+
+
 
     Queue<Integer> myQueue = new LinkedList<>();
 
@@ -76,10 +88,12 @@ class StackQueueMini {
     }//end while loop
 
     System.out.println("Here is your new Queue after the method:");
+    System.out.print("FRONT: ");
     while (!finalQueue.isEmpty())
     {
       System.out.print(finalQueue.remove() + ", ");
     }//end while loop
+    System.out.println("BACK");
 
     in.close();
   } // end main
